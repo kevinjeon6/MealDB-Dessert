@@ -22,6 +22,7 @@
 		74BD0B7D2A4004910017997D /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7C2A4004910017997D /* CachedImageView.swift */; };
 		74BD0B7F2A400C500017997D /* DessertRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7E2A400C500017997D /* DessertRecipeView.swift */; };
 		74BD0B872A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */; };
+		74BD0B8E2A4097BA0017997D /* DessertViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B8D2A4097BA0017997D /* DessertViewModel_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		74BD0B7E2A400C500017997D /* DessertRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRecipeView.swift; sourceTree = "<group>"; };
 		74BD0B842A4093130017997D /* MealDB-Dessert-Fetch_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-Dessert-Fetch_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB_Dessert_Fetch_Tests.swift; sourceTree = "<group>"; };
+		74BD0B8D2A4097BA0017997D /* DessertViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */,
+				74BD0B8D2A4097BA0017997D /* DessertViewModel_Tests.swift */,
 			);
 			path = "MealDB-Dessert-Fetch_Tests";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BD0B872A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift in Sources */,
+				74BD0B8E2A4097BA0017997D /* DessertViewModel_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
