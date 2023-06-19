@@ -26,16 +26,20 @@ final class DessertViewModel_Tests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    @MainActor func test_DessertViewModel_endpoint_request_isValid() async throws {
+    @MainActor func test_DessertViewModel_endpoint_requestDessert_isValid() async throws {
         //Given
         let viewModel = DessertViewModel()
         //When
         let expectation = XCTestExpectation(description: "Fetch desserts")
+       
         Task {
             do {
+                //Verifying that the response is not nil
                 try await viewModel.getDesserts()
                 XCTAssertNotNil(viewModel.dessertItem)
+                XCTAssertTrue(viewModel.dessertItem?.meals.count ?? 0 > 0)
             } catch {
+                //If nil, test will fail
                 XCTFail("Failed to fetch desserts: \(error)")
             }
             
@@ -44,6 +48,23 @@ final class DessertViewModel_Tests: XCTestCase {
         //Then
       
     }
+    
+    @MainActor func test_DessertViewModel_firstDessertItem_request_isValid() async throws {
+        //Given
+        let viewModel = DessertViewModel()
+
+        //When
+        //Testing to make sure that Apam balik is the first item of the dessert meals
+        let actual = viewModel.dessertItem?.meals.first?.dessertName ?? "Apam balik"
+        let expected = "Apam balik"
+        //Then
+        //Comparing two items that are the same
+        XCTAssertEqual(actual, expected)
+  
+      
+    }
+    
+    
     
     @MainActor func test_RecipeViewModel_endpoint_request_isValid() async throws {
         let recipeViewModel = RecipeViewModel()
@@ -58,9 +79,19 @@ final class DessertViewModel_Tests: XCTestCase {
             }
             expectation.fulfill()
         }
+    }
+    
+    @MainActor func test_RecipeViewModel_endpoint_requestMealID_isValid() async throws {
+        let recipeViewModel = RecipeViewModel()
         
+        //Testing to make sure that idMeal is the first meal ID for the recipe of the dessert meals
+        let expectation = XCTestExpectation(description: "Fetch dessert recipes")
+        let actual = recipeViewModel.recipes?.meals.first?.idMeal ?? "53049"
+        let expected = "53049"
+        XCTAssertEqual(actual, expected)
 
     }
+    
     
 
 
