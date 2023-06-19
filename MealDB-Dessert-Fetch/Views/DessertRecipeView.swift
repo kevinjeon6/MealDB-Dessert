@@ -50,6 +50,7 @@ struct DessertRecipeView: View {
         .task {
             try? await recipeViewModel.getRecipeDetails(for: mealID)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
