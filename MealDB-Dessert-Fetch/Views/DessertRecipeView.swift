@@ -17,12 +17,36 @@ struct DessertRecipeView: View {
     
     // MARK: - Body
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             ForEach(recipeViewModel.recipes?.meals ?? [], id: \.idMeal) { meal in
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text(meal.strMeal ?? "")
+                        .font(.title3.bold())
+                        .frame(maxWidth: .infinity)
+                    CachedImageView(url: meal.strMealThumb)
+                        .frame(maxWidth: .infinity)
+                       
+                        Divider()
+                    Text("Instructions")
+                        .font(.headline)
+                
                     Text(meal.strInstructions)
+                    
+                    Divider()
+                    
+                    Text("Ingredients")
+                        .font(.headline)
+                    ForEach(meal.ingredients.indices, id: \.self) { index in
+                        HStack {
+                            Text("\(meal.ingredients[index])")
+                            Spacer()
+                            Text("\(meal.measurements[index])")
+                        }
+
+                    }
+                        
                 }
+                .padding(.horizontal)
             }
         }
         .task {
