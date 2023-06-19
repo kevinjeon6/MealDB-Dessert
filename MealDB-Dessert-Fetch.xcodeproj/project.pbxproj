@@ -11,6 +11,7 @@
 		74705F402A3FE5B4009C5F8F /* DessertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74705F3F2A3FE5B4009C5F8F /* DessertView.swift */; };
 		74705F422A3FE5B5009C5F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74705F412A3FE5B5009C5F8F /* Assets.xcassets */; };
 		74705F452A3FE5B5009C5F8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74705F442A3FE5B5009C5F8F /* Preview Assets.xcassets */; };
+		74705F4F2A3FE6A4009C5F8F /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74705F4E2A3FE6A4009C5F8F /* Dessert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		74705F3F2A3FE5B4009C5F8F /* DessertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertView.swift; sourceTree = "<group>"; };
 		74705F412A3FE5B5009C5F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74705F442A3FE5B5009C5F8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74705F4E2A3FE6A4009C5F8F /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		74705F4C2A3FE630009C5F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74705F4E2A3FE6A4009C5F8F /* Dessert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74705F402A3FE5B4009C5F8F /* DessertView.swift in Sources */,
+				74705F4F2A3FE6A4009C5F8F /* Dessert.swift in Sources */,
 				74705F3E2A3FE5B4009C5F8F /* MealDB_Dessert_FetchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
