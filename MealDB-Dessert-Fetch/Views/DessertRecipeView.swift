@@ -24,8 +24,7 @@ struct DessertRecipeView: View {
                         .font(.title3.bold())
                         .frame(maxWidth: .infinity)
                     CachedImageView(url: meal.strMealThumb)
-                        .frame(maxWidth: .infinity)
-                       
+                        .frame(maxWidth: .infinity, maxHeight: 200)
                         Divider()
                     Text("Instructions")
                         .font(.headline)
@@ -44,7 +43,6 @@ struct DessertRecipeView: View {
                         }
 
                     }
-                        
                 }
                 .padding(.horizontal)
             }

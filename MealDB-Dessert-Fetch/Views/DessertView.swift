@@ -24,6 +24,7 @@ struct DessertView: View {
                 } label: {
                     HStack {
                         CachedImageView(url: item.imageURLString)
+                            .frame(width: 100, height: 100)
 
                         Text(item.dessertName)
                             .font(.headline)
