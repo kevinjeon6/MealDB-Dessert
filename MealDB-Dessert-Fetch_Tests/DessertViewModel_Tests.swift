@@ -31,7 +31,7 @@ final class DessertViewModel_Tests: XCTestCase {
         let viewModel = DessertViewModel()
         //When
         let expectation = XCTestExpectation(description: "Fetch desserts")
-       
+       //Then
         Task {
             do {
                 //Verifying that the response is not nil
@@ -45,16 +45,16 @@ final class DessertViewModel_Tests: XCTestCase {
             
             expectation.fulfill()
         }
-        //Then
       
     }
     
+    
+    //Testing to make sure that Apam balik is the first item of the dessert meals
     @MainActor func test_DessertViewModel_firstDessertItem_request_isValid() async throws {
         //Given
         let viewModel = DessertViewModel()
 
         //When
-        //Testing to make sure that Apam balik is the first item of the dessert meals
         let actual = viewModel.dessertItem?.meals.first?.dessertName ?? "Apam balik"
         let expected = "Apam balik"
         //Then
@@ -81,10 +81,11 @@ final class DessertViewModel_Tests: XCTestCase {
         }
     }
     
+    
+    //Testing to make sure that idMeal is the first meal ID for the recipe of the dessert meals
     @MainActor func test_RecipeViewModel_endpoint_requestMealID_isValid() async throws {
         let recipeViewModel = RecipeViewModel()
         
-        //Testing to make sure that idMeal is the first meal ID for the recipe of the dessert meals
         let expectation = XCTestExpectation(description: "Fetch dessert recipes")
         let actual = recipeViewModel.recipes?.meals.first?.idMeal ?? "53049"
         let expected = "53049"
