@@ -9,8 +9,11 @@ import SwiftUI
 
 struct DessertView: View {
     
+    // MARK: - Properties
     @StateObject var viewModel = DessertViewModel()
     
+    
+    // MARK: - Body
     var body: some View {
         
         NavigationStack {

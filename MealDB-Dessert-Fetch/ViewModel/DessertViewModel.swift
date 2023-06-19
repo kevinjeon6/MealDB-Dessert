@@ -11,9 +11,12 @@ import Foundation
 @MainActor
 class DessertViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var dessertItem: DessertResponse?
     
     
+    // MARK: - Methods
     func getDesserts() async throws {
         
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else { throw MealError.invalidURL }
