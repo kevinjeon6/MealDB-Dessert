@@ -20,22 +20,11 @@ struct DessertView: View {
             List(viewModel.dessertItem?.meals ?? [], id: \.id) { item in
                 
                 HStack {
-                    AsyncImage(url: URL(string: item.imageURLString)) { phase in
-                        
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .cornerRadius(10)
-                        } else if phase.error != nil {
-                            Text("Couldn't upload")
-                        } else {
-                            ProgressView()
-                        }
-                    }
+                    CachedImageView(url: item.imageURLString)
+
 
                     Text(item.dessertName)
+                        .font(.headline)
                 }
                 
             }

@@ -16,6 +16,10 @@
 		74705F542A3FE937009C5F8F /* MealError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74705F532A3FE937009C5F8F /* MealError.swift */; };
 		74BD0B722A3FEE430017997D /* DessertRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B712A3FEE430017997D /* DessertRecipe.swift */; };
 		74BD0B742A3FF50C0017997D /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B732A3FF50C0017997D /* RecipeViewModel.swift */; };
+		74BD0B772A4002340017997D /* ImageRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B762A4002340017997D /* ImageRetriever.swift */; };
+		74BD0B792A4003050017997D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B782A4003050017997D /* ImageCache.swift */; };
+		74BD0B7B2A4004540017997D /* CachedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7A2A4004540017997D /* CachedImageManager.swift */; };
+		74BD0B7D2A4004910017997D /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7C2A4004910017997D /* CachedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		74705F532A3FE937009C5F8F /* MealError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealError.swift; sourceTree = "<group>"; };
 		74BD0B712A3FEE430017997D /* DessertRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRecipe.swift; sourceTree = "<group>"; };
 		74BD0B732A3FF50C0017997D /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		74BD0B762A4002340017997D /* ImageRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRetriever.swift; sourceTree = "<group>"; };
+		74BD0B782A4003050017997D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		74BD0B7A2A4004540017997D /* CachedImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageManager.swift; sourceTree = "<group>"; };
+		74BD0B7C2A4004910017997D /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +118,20 @@
 			isa = PBXGroup;
 			children = (
 				74705F532A3FE937009C5F8F /* MealError.swift */,
+				74BD0B752A4002210017997D /* Cache */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		74BD0B752A4002210017997D /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				74BD0B762A4002340017997D /* ImageRetriever.swift */,
+				74BD0B782A4003050017997D /* ImageCache.swift */,
+				74BD0B7A2A4004540017997D /* CachedImageManager.swift */,
+				74BD0B7C2A4004910017997D /* CachedImageView.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +205,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BD0B722A3FEE430017997D /* DessertRecipe.swift in Sources */,
+				74BD0B7D2A4004910017997D /* CachedImageView.swift in Sources */,
 				74705F542A3FE937009C5F8F /* MealError.swift in Sources */,
+				74BD0B772A4002340017997D /* ImageRetriever.swift in Sources */,
+				74BD0B792A4003050017997D /* ImageCache.swift in Sources */,
 				74705F402A3FE5B4009C5F8F /* DessertView.swift in Sources */,
 				74BD0B742A3FF50C0017997D /* RecipeViewModel.swift in Sources */,
 				74705F4F2A3FE6A4009C5F8F /* Dessert.swift in Sources */,
+				74BD0B7B2A4004540017997D /* CachedImageManager.swift in Sources */,
 				74705F3E2A3FE5B4009C5F8F /* MealDB_Dessert_FetchApp.swift in Sources */,
 				74705F512A3FE821009C5F8F /* DessertViewModel.swift in Sources */,
 			);
