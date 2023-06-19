@@ -37,7 +37,7 @@ struct DessertRecipeView: View {
                         .font(.headline)
                     ForEach(meal.ingredients.indices, id: \.self) { index in
                         HStack {
-                            Text("\(meal.ingredients[index])")
+                            Text("\(index + 1). \(meal.ingredients[index])")
                             Spacer()
                             Text("\(meal.measurements[index])")
                         }
