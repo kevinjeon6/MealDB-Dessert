@@ -21,7 +21,18 @@
 		74BD0B7B2A4004540017997D /* CachedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7A2A4004540017997D /* CachedImageManager.swift */; };
 		74BD0B7D2A4004910017997D /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7C2A4004910017997D /* CachedImageView.swift */; };
 		74BD0B7F2A400C500017997D /* DessertRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7E2A400C500017997D /* DessertRecipeView.swift */; };
+		74BD0B872A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74BD0B882A4093130017997D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74705F322A3FE5B4009C5F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74705F392A3FE5B4009C5F8F;
+			remoteInfo = "MealDB-Dessert-Fetch";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		74705F3A2A3FE5B4009C5F8F /* MealDB-Dessert-Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MealDB-Dessert-Fetch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,10 +50,19 @@
 		74BD0B7A2A4004540017997D /* CachedImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageManager.swift; sourceTree = "<group>"; };
 		74BD0B7C2A4004910017997D /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		74BD0B7E2A400C500017997D /* DessertRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRecipeView.swift; sourceTree = "<group>"; };
+		74BD0B842A4093130017997D /* MealDB-Dessert-Fetch_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-Dessert-Fetch_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB_Dessert_Fetch_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		74705F372A3FE5B4009C5F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74BD0B812A4093130017997D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				74705F3C2A3FE5B4009C5F8F /* MealDB-Dessert-Fetch */,
+				74BD0B852A4093130017997D /* MealDB-Dessert-Fetch_Tests */,
 				74705F3B2A3FE5B4009C5F8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				74705F3A2A3FE5B4009C5F8F /* MealDB-Dessert-Fetch.app */,
+				74BD0B842A4093130017997D /* MealDB-Dessert-Fetch_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +159,14 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		74BD0B852A4093130017997D /* MealDB-Dessert-Fetch_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				74BD0B862A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift */,
+			);
+			path = "MealDB-Dessert-Fetch_Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +187,24 @@
 			productReference = 74705F3A2A3FE5B4009C5F8F /* MealDB-Dessert-Fetch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		74BD0B832A4093130017997D /* MealDB-Dessert-Fetch_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74BD0B8C2A4093130017997D /* Build configuration list for PBXNativeTarget "MealDB-Dessert-Fetch_Tests" */;
+			buildPhases = (
+				74BD0B802A4093130017997D /* Sources */,
+				74BD0B812A4093130017997D /* Frameworks */,
+				74BD0B822A4093130017997D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74BD0B892A4093130017997D /* PBXTargetDependency */,
+			);
+			name = "MealDB-Dessert-Fetch_Tests";
+			productName = "MealDB-Dessert-Fetch_Tests";
+			productReference = 74BD0B842A4093130017997D /* MealDB-Dessert-Fetch_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,6 +217,10 @@
 				TargetAttributes = {
 					74705F392A3FE5B4009C5F8F = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					74BD0B832A4093130017997D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 74705F392A3FE5B4009C5F8F;
 					};
 				};
 			};
@@ -186,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				74705F392A3FE5B4009C5F8F /* MealDB-Dessert-Fetch */,
+				74BD0B832A4093130017997D /* MealDB-Dessert-Fetch_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +250,13 @@
 			files = (
 				74705F452A3FE5B5009C5F8F /* Preview Assets.xcassets in Resources */,
 				74705F422A3FE5B5009C5F8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74BD0B822A4093130017997D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +282,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74BD0B802A4093130017997D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BD0B872A4093130017997D /* MealDB_Dessert_Fetch_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74BD0B892A4093130017997D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74705F392A3FE5B4009C5F8F /* MealDB-Dessert-Fetch */;
+			targetProxy = 74BD0B882A4093130017997D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		74705F462A3FE5B5009C5F8F /* Debug */ = {
@@ -397,6 +473,42 @@
 			};
 			name = Release;
 		};
+		74BD0B8A2A4093130017997D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95Y447U3W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinjeon.MealDB-Dessert-Fetch-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealDB-Dessert-Fetch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealDB-Dessert-Fetch";
+			};
+			name = Debug;
+		};
+		74BD0B8B2A4093130017997D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95Y447U3W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinjeon.MealDB-Dessert-Fetch-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealDB-Dessert-Fetch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealDB-Dessert-Fetch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,6 +526,15 @@
 			buildConfigurations = (
 				74705F492A3FE5B5009C5F8F /* Debug */,
 				74705F4A2A3FE5B5009C5F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74BD0B8C2A4093130017997D /* Build configuration list for PBXNativeTarget "MealDB-Dessert-Fetch_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74BD0B8A2A4093130017997D /* Debug */,
+				74BD0B8B2A4093130017997D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
