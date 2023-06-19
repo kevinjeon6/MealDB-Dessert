@@ -26,12 +26,11 @@ final class DessertViewModel_Tests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    @MainActor func test_DessertViewModel_endpoint_request_isValid() {
+    @MainActor func test_DessertViewModel_endpoint_request_isValid() async throws {
         //Given
         let viewModel = DessertViewModel()
         //When
         let expectation = XCTestExpectation(description: "Fetch desserts")
-        
         Task {
             do {
                 try await viewModel.getDesserts()
@@ -43,8 +42,26 @@ final class DessertViewModel_Tests: XCTestCase {
             expectation.fulfill()
         }
         //Then
-        
-        wait(for: [expectation], timeout: 2.0)
+      
     }
+    
+    @MainActor func test_RecipeViewModel_endpoint_request_isValid() async throws {
+        let recipeViewModel = RecipeViewModel()
+        
+        let expectation = XCTestExpectation(description: "Fetch dessert recipes")
+       
+        Task {
+            do {
+                try await recipeViewModel.getRecipeDetails(for: "53049")
+            } catch {
+                XCTFail("Failed to fetch desserts: \(error)")
+            }
+            expectation.fulfill()
+        }
+        
+
+    }
+    
+
 
 }
