@@ -19,14 +19,16 @@ struct DessertView: View {
         NavigationStack {
             List(viewModel.dessertItem?.meals ?? [], id: \.id) { item in
                 
-                HStack {
-                    CachedImageView(url: item.imageURLString)
+                NavigationLink {
+                    DessertRecipeView(mealID: item.id)
+                } label: {
+                    HStack {
+                        CachedImageView(url: item.imageURLString)
 
-
-                    Text(item.dessertName)
-                        .font(.headline)
+                        Text(item.dessertName)
+                            .font(.headline)
+                    }
                 }
-                
             }
             .listStyle(.inset)
             .task {

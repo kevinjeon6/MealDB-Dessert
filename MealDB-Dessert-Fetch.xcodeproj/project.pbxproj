@@ -20,6 +20,7 @@
 		74BD0B792A4003050017997D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B782A4003050017997D /* ImageCache.swift */; };
 		74BD0B7B2A4004540017997D /* CachedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7A2A4004540017997D /* CachedImageManager.swift */; };
 		74BD0B7D2A4004910017997D /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7C2A4004910017997D /* CachedImageView.swift */; };
+		74BD0B7F2A400C500017997D /* DessertRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD0B7E2A400C500017997D /* DessertRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		74BD0B782A4003050017997D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		74BD0B7A2A4004540017997D /* CachedImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageManager.swift; sourceTree = "<group>"; };
 		74BD0B7C2A4004910017997D /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		74BD0B7E2A400C500017997D /* DessertRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				74705F3F2A3FE5B4009C5F8F /* DessertView.swift */,
+				74BD0B7E2A400C500017997D /* DessertRecipeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				74BD0B792A4003050017997D /* ImageCache.swift in Sources */,
 				74705F402A3FE5B4009C5F8F /* DessertView.swift in Sources */,
 				74BD0B742A3FF50C0017997D /* RecipeViewModel.swift in Sources */,
+				74BD0B7F2A400C500017997D /* DessertRecipeView.swift in Sources */,
 				74705F4F2A3FE6A4009C5F8F /* Dessert.swift in Sources */,
 				74BD0B7B2A4004540017997D /* CachedImageManager.swift in Sources */,
 				74705F3E2A3FE5B4009C5F8F /* MealDB_Dessert_FetchApp.swift in Sources */,
