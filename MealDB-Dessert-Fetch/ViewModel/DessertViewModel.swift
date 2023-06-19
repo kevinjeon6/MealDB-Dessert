@@ -14,6 +14,15 @@ class DessertViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var dessertItem: DessertResponse?
+    @Published var searchText = ""
+    
+    var filterDesserts: [DessertMeal] {
+        if searchText.isEmpty {
+            return dessertItem?.meals ?? []
+        } else {
+            return dessertItem?.meals.filter { $0.dessertName.localizedCaseInsensitiveContains(searchText)} ?? []
+        }
+    }
     
     
     // MARK: - Methods

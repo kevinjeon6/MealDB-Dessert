@@ -17,7 +17,7 @@ struct DessertView: View {
     var body: some View {
         
         NavigationStack {
-            List(viewModel.dessertItem?.meals ?? [], id: \.id) { item in
+            List(viewModel.filterDesserts, id: \.id) { item in
                 
                 NavigationLink {
                     DessertRecipeView(mealID: item.id)
@@ -35,6 +35,7 @@ struct DessertView: View {
             .task {
                 try? await viewModel.getDesserts()
             }
+            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Desserts")
         }
     }
