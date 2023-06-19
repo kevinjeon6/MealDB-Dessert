@@ -11,7 +11,7 @@ import Foundation
 @MainActor
 class DessertViewModel: ObservableObject {
     
-    @Published var dessertItem: DessertResponse
+    @Published var dessertItem: DessertResponse?
     
     
     func getDesserts() async throws {
