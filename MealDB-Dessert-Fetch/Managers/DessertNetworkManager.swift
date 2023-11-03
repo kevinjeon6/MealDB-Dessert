@@ -10,8 +10,8 @@ import Foundation
 
 class DessertNetworkManager {
     
-    
-    
+    //Static. Can call this function/method without making an instance
+    //Static keyword is creating a type constant
     static func getDesserts() async throws -> DessertResponse? {
         
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else { throw MealError.invalidURL }
