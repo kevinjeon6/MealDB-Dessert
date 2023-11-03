@@ -15,6 +15,7 @@ final class CachedImageManager: ObservableObject {
     //Fetch image
     private let imageRetriever = ImageRetriever()
     
+    //MainActor interacting with the UI. We want that it makes changes on the main thread
     @MainActor
     func load(_ imgUrl: String, cache: ImageCache = .shared) async {
         

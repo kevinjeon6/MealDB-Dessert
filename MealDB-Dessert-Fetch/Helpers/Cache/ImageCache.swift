@@ -33,6 +33,7 @@ class ImageCache {
     
     // MARK: - Methods
     //Getting the item
+    //Allows us to grab an object from the cache and need to pass in the key for the object.
     func object(forkey key: NSString) -> Data? {
         cache.object(forKey: key) as? Data
     }
