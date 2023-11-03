@@ -17,27 +17,34 @@ struct DessertView: View {
     var body: some View {
         
         NavigationStack {
-            List(viewModel.filterDesserts, id: \.id) { item in
-                
-                NavigationLink {
-                    DessertRecipeView(mealID: item.id)
-                } label: {
-                    HStack {
-                        CachedImageView(url: item.imageURLString)
-                            .frame(width: 100, height: 100)
-
-                        Text(item.dessertName)
-                            .font(.headline)
+            
+            //Provide message that if the dessert that they are searching is not there, it will display 'Nothing here'
+            //If there is a dessert or when they are typing. Display the list of desserts
+            if !viewModel.filterDesserts.isEmpty {
+                List(viewModel.filterDesserts, id: \.id) { item in
+                    
+                    NavigationLink {
+                        DessertRecipeView(mealID: item.id)
+                    } label: {
+                        HStack {
+                            CachedImageView(url: item.imageURLString)
+                                .frame(width: 100, height: 100)
+                            
+                            Text(item.dessertName)
+                                .font(.headline)
+                        }
                     }
                 }
+                .listStyle(.inset)
+            } else {
+                Text("Nothing here")
             }
-            .listStyle(.inset)
-            .task {
-                try? await viewModel.getDesserts()
-            }
-            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-            .navigationTitle("Desserts")
         }
+        .searchable(
+            text: $viewModel.searchText,
+            placement: .navigationBarDrawer(displayMode: .always)
+        )
+        .navigationTitle("Desserts")
     }
 }
 
