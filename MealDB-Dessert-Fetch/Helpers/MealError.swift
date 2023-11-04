@@ -12,6 +12,7 @@ enum MealError: Error {
     
     case invalidURL
     case serverError
+    case invalidData
     
     var errorDescription: String? {
         switch self {
@@ -19,6 +20,8 @@ enum MealError: Error {
             return "This is a bad URL"
         case .serverError:
             return "Error while fetching the data"
+        case .invalidData:
+            return "Invalid data retreiving data"
         }
     }
 }

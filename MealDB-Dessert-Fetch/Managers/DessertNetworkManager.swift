@@ -30,8 +30,7 @@ class DessertNetworkManager {
             
             
         } catch {
-            return nil
-//            print("Error. Something went wrong\n\(error)")
+            throw MealError.invalidData
         }
     }
     

@@ -33,7 +33,7 @@ class RecipeViewModel: ObservableObject {
             
             
         } catch {
-            print("Error something went wrong\n\(error)")
+            throw MealError.invalidData
         }
         
     }
