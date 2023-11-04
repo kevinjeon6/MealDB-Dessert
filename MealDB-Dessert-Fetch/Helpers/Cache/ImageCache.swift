@@ -13,6 +13,8 @@ class ImageCache {
     
     typealias CacheType = NSCache<NSString, NSData>
     //NSString is the imgURL string and the NSData is the data saved associated with imgURL
+    //Works similar to a dictionary. Key = imgURL and Value =  NSData
+    //Holding the images
     
     // MARK: - Singleton
     static let shared = ImageCache()
@@ -24,8 +26,10 @@ class ImageCache {
     //Lazy because this won't be initialized until we directly use the cache
     private lazy var cache: CacheType = {
         let cache = CacheType()
-        cache.countLimit = 100 //How many items within it
-        cache.totalCostLimit = 50 * 1024 * 1024 // 50 MB
+        cache.countLimit = 100 //How many items it can hold
+        //Setting limit because we are storing it in the local cache or memory within the device.
+        //Want to keep memory low as possible. If not, bugs may occur
+        cache.totalCostLimit = 50 * 1024 * 1024 // 50 MB. Amount of data to put in the cache
         return cache
         
     }()

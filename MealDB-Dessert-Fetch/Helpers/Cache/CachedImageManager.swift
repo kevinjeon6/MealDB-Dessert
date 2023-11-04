@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+//Using the final keyword to avoid inheritence
 final class CachedImageManager: ObservableObject {
     
     //private set - only want the views to listen to the changes and not change it
@@ -16,6 +18,7 @@ final class CachedImageManager: ObservableObject {
     private let imageRetriever = ImageRetriever()
     
     //MainActor interacting with the UI. We want that it makes changes on the main thread
+    //Give the ability to inject it's own ImageCache. Will allow to pass in different types of image caches in future if needed
     @MainActor
     func load(_ imgUrl: String, cache: ImageCache = .shared) async {
         

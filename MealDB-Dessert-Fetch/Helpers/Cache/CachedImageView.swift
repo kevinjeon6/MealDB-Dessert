@@ -30,6 +30,7 @@ struct CachedImageView: View {
             }
         }
         .task {
+            //Executes to load an image from a URL
             await imageManager.load(url)
         }
     }
